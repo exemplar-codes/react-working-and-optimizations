@@ -8,7 +8,7 @@ function App() {
   const toggleParagraphHandler = useCallback(() => {
     if (allowToggle)
       setShowParagraph((prevShowParagraph) => !prevShowParagraph);
-  }, []);
+  }, [allowToggle]);
 
   const allowToggleHandler = () => setAllowToggle((prev) => !prev);
 
