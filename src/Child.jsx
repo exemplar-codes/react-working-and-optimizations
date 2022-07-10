@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-function Child() {
+const Child = React.memo(() => {
   console.log("Child Ran");
   return "I am a child";
-}
+});
 
-export default React.memo(Child);
+export default Child;
