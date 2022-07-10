@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Child from "./Child";
 
 let firstTime = true;
 
@@ -18,6 +19,7 @@ function App() {
       <h1>Hi there!</h1>
       {showParagraph && <p>This is new!</p>}
       <button onClick={toggleParagraphHandler}>Toggle</button>
+      <Child />
     </div>
   );
 }
