@@ -1,7 +1,5 @@
 import { useState } from "react";
-import Child from "./Child";
-
-let firstTime = true;
+import Button from "./Button";
 
 function App() {
   const [showParagraph, setShowParagraph] = useState(false);
@@ -9,17 +7,11 @@ function App() {
   const toggleParagraphHandler = () =>
     setShowParagraph((prevShowParagraph) => !prevShowParagraph);
 
-  if (firstTime) {
-    console.log("First run");
-    firstTime = false;
-  } else console.log("Run on update");
-
   return (
     <div>
       <h1>Hi there!</h1>
       {showParagraph && <p>This is new!</p>}
-      <button onClick={toggleParagraphHandler}>Toggle</button>
-      <Child />
+      <Button toggleParagraphHandler={toggleParagraphHandler} />
     </div>
   );
 }
